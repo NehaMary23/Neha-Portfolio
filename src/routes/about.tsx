@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/portfolio/Layout";
 import { Target, Code2, GraduationCap, Users } from "lucide-react";
-import avatar from "@/assets/avatar.png";
+import nehaPhoto from "@/assets/neha-photo.jpeg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -29,9 +29,36 @@ function AboutPage() {
         <p className="text-sm uppercase tracking-widest text-muted-foreground">About</p>
         <h1 className="mt-2 text-5xl md:text-6xl font-display">Get to know me better.</h1>
 
-        <div className="mt-12 grid md:grid-cols-[260px_1fr] gap-10 items-start">
-          <div className="rounded-3xl overflow-hidden border border-border/60 bg-secondary/40 shadow-[var(--shadow-card)]">
-            <img src={avatar} alt="Neha Mary Pramod" className="w-full h-auto block" />
+        <div className="mt-12 grid md:grid-cols-[300px_1fr] gap-10 items-start">
+          {/* ID Card */}
+          <div className="relative mx-auto w-[280px]">
+            {/* Lanyard */}
+            <div className="mx-auto h-10 w-1.5 bg-foreground/70 rounded-b-sm" aria-hidden />
+            <div className="mx-auto -mt-1 h-3 w-10 rounded-md bg-foreground/80 shadow-sm" aria-hidden />
+            {/* Card body */}
+            <div className="mt-2 rounded-2xl bg-card border border-border/60 shadow-[var(--shadow-soft)] overflow-hidden">
+              <div className="flex items-center justify-between px-4 py-2 bg-foreground text-background">
+                <span className="text-[10px] font-semibold tracking-[0.2em] uppercase">Portfolio · 2026</span>
+                <span className="text-[10px] font-mono opacity-80">ID 026</span>
+              </div>
+              <div className="p-3">
+                <div className="aspect-[3/4] w-full rounded-lg overflow-hidden bg-secondary">
+                  <img
+                    src={nehaPhoto}
+                    alt="Neha Mary Pramod portrait"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="mt-3 px-1">
+                  <p className="text-[10px] uppercase tracking-widest text-muted-foreground">Name</p>
+                  <p className="font-display text-lg leading-tight">Neha Mary Pramod</p>
+                  <p className="mt-2 text-[10px] uppercase tracking-widest text-muted-foreground">Role</p>
+                  <p className="text-sm">Full Stack Developer</p>
+                </div>
+                <div className="mt-3 mx-1 h-6 rounded bg-[repeating-linear-gradient(90deg,theme(colors.foreground)_0_2px,transparent_2px_5px)] opacity-80" aria-hidden />
+              </div>
+            </div>
           </div>
 
           <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
