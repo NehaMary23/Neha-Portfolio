@@ -116,7 +116,7 @@ const traits = [
   {
     icon: Code2,
     title: "Full Stack Developer",
-    desc: "Expert in modern frontend and backend development.",
+    desc: "Experienced in modern frontend and backend development.",
   },
   {
     icon: GraduationCap,
