@@ -5,6 +5,7 @@ import {
   Award,
   Code2,
   Download,
+  ExternalLink,
   GraduationCap,
   Github,
   Linkedin,
@@ -41,16 +42,22 @@ const projects = [
     title: "Point Hub — Activity Points Calculator",
     desc: "A comprehensive web app that automates calculation and approval workflow of student activity points. Certificate uploads, teacher review, admin scoring management — transparent and efficient.",
     tech: ["React", "JavaScript", "Node.js", "Express", "MongoDB", "Vercel", "Render"],
+    github: "https://github.com/nehamary/point-hub",
+    demo: "https://point-hub.vercel.app",
   },
   {
     title: "Lumina — Design Portfolio CMS",
     desc: "A headless content system for designers and creatives to publish case studies with cinematic galleries, MDX-powered writing, and lightning-fast page loads.",
     tech: ["Next.js", "TypeScript", "Tailwind", "Sanity", "Vercel"],
+    github: "https://github.com/nehamary/lumina",
+    demo: "https://lumina-cms.vercel.app",
   },
   {
     title: "Wavelength — Realtime Chat",
     desc: "End-to-end realtime chat with rooms, presence, typing indicators, and a buttery-smooth message virtualization layer for thousands of messages.",
     tech: ["React", "Socket.io", "Node.js", "PostgreSQL"],
+    github: "https://github.com/nehamary/wavelength",
+    demo: "https://wavelength-chat.vercel.app",
   },
 ];
 
@@ -262,10 +269,9 @@ function Index() {
 
           <div className="mt-12 space-y-6">
             {projects.map((p, i) => (
-              <a
+              <div
                 key={p.title}
-                href="#"
-                className="group block p-7 md:p-9 rounded-3xl bg-card border border-border/60 hover:border-foreground/40 transition shadow-[var(--shadow-card)]"
+                className="group p-7 md:p-9 rounded-3xl bg-card border border-border/60 hover:border-foreground/40 transition shadow-[var(--shadow-card)]"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div>
@@ -282,7 +288,25 @@ function Index() {
                     </span>
                   ))}
                 </div>
-              </a>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-foreground/20 text-sm font-semibold hover:bg-secondary transition"
+                  >
+                    <Github className="h-4 w-4" /> GitHub
+                  </a>
+                  <a
+                    href={p.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-foreground text-background text-sm font-semibold hover:opacity-90 transition"
+                  >
+                    <ExternalLink className="h-4 w-4" /> Live Demo
+                  </a>
+                </div>
+              </div>
             ))}
           </div>
         </div>
