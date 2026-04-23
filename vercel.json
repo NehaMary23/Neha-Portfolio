@@ -1,4 +1,9 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist/client"
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/assets/(.*)", "dest": "/dist/client/assets/$1" },
+    { "src": "/(.*\\.(css|js|png|jpg|jpeg|svg|gif|webp))", "dest": "/dist/client/$1" },
+    { "src": "/(.*)", "dest": "/api/index.ts" }
+  ]
 }
