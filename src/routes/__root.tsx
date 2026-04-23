@@ -30,22 +30,33 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Neha Mary Pramod — Portfolio '26" },
-      { name: "description", content: "Portfolio of Neha Mary Pramod — Full Stack Web Developer crafting beautiful, high-performance web applications." },
+      {
+        name: "description",
+        content:
+          "Portfolio of Neha Mary Pramod — Full Stack Web Developer crafting beautiful, high-performance web applications.",
+      },
       { name: "author", content: "Neha Mary Pramod" },
       { property: "og:title", content: "Neha Mary Pramod — Portfolio '26" },
-      { property: "og:description", content: "Full Stack Web Developer building elegant, modern digital experiences." },
+      {
+        property: "og:description",
+        content: "Full Stack Web Developer building elegant, modern digital experiences.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      { rel: "icon", type: "image/png", href: "/favicon.png" }, // ADD THIS
       {
         rel: "stylesheet",
         href: appCss,
       },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600;700&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600;700&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,

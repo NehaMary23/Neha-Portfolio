@@ -1067,7 +1067,7 @@ function Index() {
       </section>
 
       {/* ── ACHIEVEMENTS ── */}
-      <section id="achievements" className="scroll-mt-24 relative bg-secondary/50">
+      <section id="achievements" className="scroll-mt-24 relative">
         <div
           className="absolute inset-0 opacity-10 pointer-events-none"
           style={{
@@ -1127,7 +1127,7 @@ function Index() {
           }}
           aria-hidden
         />
-        <div className="relative mx-auto max-w-6xl px-6 py-20 border-t border-border/60">
+        <div className="relative mx-auto max-w-6xl px-6 py-17 border-t border-border/60">
           <Reveal>
             <p className="text-sm uppercase tracking-widest text-muted-foreground">Say hello</p>
           </Reveal>
