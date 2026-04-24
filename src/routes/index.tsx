@@ -306,7 +306,7 @@ const achievements = [
   {
     title: "Dancer",
     level: "State Level",
-    desc: "Achieved 3rd place at State Level Dance Competition.",
+    desc: "Achieved 3rd place at State Level Kalolsav.",
     images: [
       d1,
       d2,
